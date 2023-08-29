@@ -18,5 +18,5 @@ services:
       - PUID=1000
       - PGID=1000
       - TZ=Asia/Ho_Chi_Minh
-      - CUSTOM_USER=tmsang
-      - PASSWORD=Sa@01997326833
+      - CUSTOM_USER=
+      - PASSWORD=
