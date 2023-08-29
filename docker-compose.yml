@@ -1,0 +1,22 @@
+---
+
+version: '3'
+services:
+  webtop:
+    build: .
+    image: truongmanhsang/webtop
+    security_opt:
+      - seccomp:unconfined
+    shm_size: '1gb'
+    container_name: webtop
+    restart: unless-stopped
+    ports:
+      - 3001:3001
+    volumes:
+      - ./data/config:/config 
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Asia/Ho_Chi_Minh
+      - CUSTOM_USER=tmsang
+      - PASSWORD=Sa@01997326833
